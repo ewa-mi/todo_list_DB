@@ -8,12 +8,14 @@ module.exports = {
         {
           task: "clean kitchen",
           deadline: "today",
+          important: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           task: "feed dog",
           deadline: "tomorrow",
+          important: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
