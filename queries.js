@@ -1,5 +1,6 @@
 const showUser = require("./models").user;
 const showToDo = require("./models").todoitem;
+// const { Op } = require("sequelize");
 
 async function showMeUsers() {
   try {
@@ -62,8 +63,21 @@ async function showMeNewUser() {
   }
 }
 
-showMeUsers().then((el) => console.log(el));
-showMeToDos().then((el) => console.log(el));
+// async function showMeUserWithJ() {
+//   try {
+//     const letterJUser = await showUser.findAll({
+//       where: { name: { [Op.startsWith]: "Jimmy" } },
+//     });
+
+//     return letterJUser.get({ plain: true });
+//   } catch (e) {
+//     console.error(e);
+//   }
+// }
+
+showMeUsers().then((el) => console.log("All users:", el));
+showMeToDos().then((el) => console.log("All tasks:", el));
 showMeImportantToDos().then((el) => console.log("important tasks", el));
 showMeThisUser().then((el) => console.log("This user:", el));
 showMeNewUser().then((el) => console.log("The new user:", el));
+// showMeUserWithJ().then((el) => console.log("The user with J:", el));

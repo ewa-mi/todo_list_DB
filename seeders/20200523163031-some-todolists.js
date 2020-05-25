@@ -6,12 +6,12 @@ module.exports = {
       "todolists",
       [
         {
-          name: "Kate Mendes",
+          name: "Jimmy Jung",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: "Danny Brown",
+          name: "Lea Lee",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
