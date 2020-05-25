@@ -23,13 +23,13 @@ module.exports = {
           name: "Jimmy list",
           createdAt: new Date(),
           updatedAt: new Date(),
-          userid: jimmy.get("id"),
+          userId: jimmy.get("id"),
         },
         {
           name: "Lea list",
           createdAt: new Date(),
           updatedAt: new Date(),
-          userid: lea.get("id"),
+          userId: lea.get("id"),
         },
       ],
       {}

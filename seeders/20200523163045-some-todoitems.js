@@ -1,7 +1,21 @@
 "use strict";
 
+const Todolist = require("../models").todolist;
+
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: async (queryInterface, Sequelize) => {
+    const leaList = await Todolist.findOne({
+      where: {
+        name: "Lea list",
+      },
+    });
+
+    const jimmyList = await Todolist.findOne({
+      where: {
+        name: "Jimmy list",
+      },
+    });
+
     return queryInterface.bulkInsert(
       "todoitems",
       [
@@ -11,6 +25,7 @@ module.exports = {
           important: false,
           createdAt: new Date(),
           updatedAt: new Date(),
+          todolistId: leaList.id,
         },
         {
           task: "feed dog",
@@ -18,6 +33,7 @@ module.exports = {
           important: true,
           createdAt: new Date(),
           updatedAt: new Date(),
+          todolistId: jimmyList.id,
         },
       ],
       {}
