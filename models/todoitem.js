@@ -6,11 +6,12 @@ module.exports = (sequelize, DataTypes) => {
       task: DataTypes.STRING,
       deadline: DataTypes.STRING,
       important: DataTypes.BOOLEAN,
+      listid: DataTypes.INTEGER,
     },
     {}
   );
   todoitem.associate = function (models) {
-    // associations can be defined here
+    todoitem.belongsTo(models.todolist);
   };
   return todoitem;
 };
