@@ -48,7 +48,22 @@ async function showMeImportantToDos() {
   }
 }
 
+async function showMeNewUser() {
+  try {
+    const newUser = await showUser.create({
+      name: "Jennie Foy",
+      email: "jenfoy@gmail.com",
+      phone: 1230517,
+    });
+
+    return newUser.get({ plain: true });
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 showMeUsers().then((el) => console.log(el));
 showMeToDos().then((el) => console.log(el));
 showMeImportantToDos().then((el) => console.log("important tasks", el));
 showMeThisUser().then((el) => console.log("This user:", el));
+showMeNewUser().then((el) => console.log("The new user:", el));
