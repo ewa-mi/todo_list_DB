@@ -16,8 +16,6 @@ module.exports = {
       },
     });
 
-    // console.log(User);
-
     return queryInterface.bulkInsert(
       "todolists",
       [
