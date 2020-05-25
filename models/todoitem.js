@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       task: DataTypes.STRING,
       deadline: DataTypes.STRING,
       important: DataTypes.BOOLEAN,
-      listid: DataTypes.INTEGER,
+      todolistid: DataTypes.INTEGER,
     },
     {}
   );

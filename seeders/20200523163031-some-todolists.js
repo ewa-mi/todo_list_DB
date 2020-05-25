@@ -1,19 +1,37 @@
 "use strict";
 
+const User = require("../models").user;
+
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: async (queryInterface, Sequelize) => {
+    const jimmy = await User.findOne({
+      where: {
+        name: "Jimmy Jung",
+      },
+    });
+
+    const lea = await User.findOne({
+      where: {
+        name: "Lea Lee",
+      },
+    });
+
+    // console.log(User);
+
     return queryInterface.bulkInsert(
       "todolists",
       [
         {
-          name: "Jimmy Jung",
+          name: "Jimmy list",
           createdAt: new Date(),
           updatedAt: new Date(),
+          userid: jimmy.get("id"),
         },
         {
-          name: "Lea Lee",
+          name: "Lea list",
           createdAt: new Date(),
           updatedAt: new Date(),
+          userid: lea.get("id"),
         },
       ],
       {}
