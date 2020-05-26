@@ -35,6 +35,30 @@ module.exports = {
           updatedAt: new Date(),
           todolistId: jimmyList.id,
         },
+        {
+          task: "feed cat",
+          deadline: "asap",
+          important: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          todolistId: jimmyList.id,
+        },
+        {
+          task: "learn Mandarin",
+          deadline: "asap",
+          important: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          todolistId: leaList.id,
+        },
+        {
+          task: "learn Math",
+          deadline: "tonight",
+          important: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          todolistId: leaList.id,
+        },
       ],
       {}
     );
