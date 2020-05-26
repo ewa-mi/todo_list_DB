@@ -4,6 +4,10 @@ const express = require("express");
 const app = express();
 const PORT = 4000;
 const User = require("./models").user;
+const cors = require("cors");
+
+app.use(cors());
+
 app.use(express.json());
 
 app.get("/users", async (req, res, next) => {
